@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop - 1</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Регистрация</h1>
+      </div>
+      <div>
+        <div>Уже есть аккаунт?</div>
+        <div>
+          <form action="#">
+            <button>Войти</button>
+            <!-- Здесь я не знаю как будет вести себя этот элемент.Если клик по ней должен открывать окно для ввода регистрационных данных на этой же странице, это кнопка. Если при нажатии должна открываться отдельная страница для входа, это ссылка. Я сделал как кнопку -->
+          </form>
+        </div>
+      </div>
+      <div>
+        <form action="#">
+          <div>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Ваша компания..."
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Имя"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Фамилия"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Зарегистрироваться</button>
+          </div>
+          <div>
+            <input type="checkbox" name="license" id="license" required />
+            <label for="license">Я прочитал и принимаю </label>
+            <a href="#">Условия использования</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
