@@ -1,0 +1,62 @@
+* {
+  background-color: #374151;
+  font-weight: 400;
+  color: #ffffff;
+}
+/* Здесь я умышленно сделал background ко всему блогу серого цвета, чтобы цвет текста не сливался с фоном. Я понимаю, что это не верно поскольку используется градиент, но на данном этапе мы его пока не изучали. Исправлю впоследствии. */
+
+#heroTextB {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  background-color: #4b5563;
+}
+
+nav a,
+#search {
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+#search {
+  background: #1f293799;
+}
+
+#heroDate,
+time {
+  font-size: 14px;
+  line-height: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 38px;
+}
+.personName,
+.developer,
+.textFooter {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.developer {
+  font-size: 14px;
+}
+
+.sectionText1 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.sectionText2,
+span a,
+.textFooter {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+span a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
