@@ -1,0 +1,160 @@
+* {
+  background-color: #374151;
+  font-weight: 400;
+  color: #ffffff;
+}
+/* Здесь я умышленно сделал background ко всему блогу серого цвета, чтобы цвет текста не сливался с фоном. Я понимаю, что это не верно поскольку используется градиент, но на данном этапе мы его пока не изучали. Исправлю впоследствии. */
+
+body {
+  margin: 0;
+}
+
+header {
+  margin-bottom: 180px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 38px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  border: 0;
+}
+
+nav {
+  padding: 80px 226px 0px;
+  border: none;
+  margin: 0;
+}
+
+nav a {
+  height: 21px;
+  border: none;
+}
+
+nav a,
+#search {
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+}
+
+footer {
+  margin: 0;
+  padding: 100px 0 77px 0;
+}
+
+span a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+input::placeholder {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+#heroTextB {
+  margin: 0;
+  padding: 72px 180px; /*Здесь и на протяжении всей верстки ставлю внутренний отступ по ширине для наглядности, понимаю что в дальнейшем регулироваться будет flex или gridами*/
+  border: none;
+
+  height: 35px;
+  width: 35px;
+}
+#heroTextB p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  background-color: #4b5563;
+  width: 11px;
+  height: 23px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+}
+
+#search {
+  background: #1f293799;
+  border-radius: 100px;
+  border: none;
+  padding: 9px 49px 12px;
+}
+
+#heroDate,
+time {
+  font-size: 14px;
+  line-height: 100%;
+}
+
+#heroDate {
+  padding: 0;
+  border: 0;
+  margin-bottom: 14px;
+}
+
+.personName,
+.developer,
+.textFooter {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.personName,
+.developer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.developer {
+  font-size: 14px;
+}
+
+.sectionText1 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.sectionText1,
+.sectionText2 {
+  margin: 0 0 15px 0;
+  border: 0;
+  padding: 0;
+}
+
+.sectionText2,
+span a,
+.textFooter {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.form {
+  margin: 0;
+  border: 0;
+  padding: 71px 0 0 1036px;
+}
+
+.personData {
+  margin-bottom: 28px;
+}
+
+.colorSpectrum {
+  margin-bottom: 69px;
+}
