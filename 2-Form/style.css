@@ -1,9 +1,17 @@
 * {
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   line-height: 100%;
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
 }
 
 main {
+  min-width: 420px;
+}
+
+body {
   background: #f39494;
 }
 
@@ -11,27 +19,34 @@ h1 {
   color: #333333;
   font-weight: 700;
   font-size: 36px;
-}
-
-form {
-  color: #fffefe;
+  letter-spacing: normal;
 }
 
 a {
   font-weight: 400;
   font-size: 18px;
   text-decoration: underline;
+  color: #089fe0;
 }
 
 input {
-  color: #999999;
   background: #f5f5f5;
+  text-indent: 11px;
+}
+
+input::placeholder {
   font-style: italic;
+  color: #999999;
+}
+
+input:focus {
+  border: 1px solid;
 }
 
 label {
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 14px;
+  color: #666666;
 }
 
 button {
@@ -39,4 +54,177 @@ button {
   background: #089fe0;
   font-weight: 400;
   font-size: 18px;
+}
+
+input,
+button {
+  border: 0;
+}
+
+span {
+  color: #666666;
+}
+
+.conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 10px;
+  background: #fffefe;
+  max-width: 582px;
+  min-width: 360px;
+  height: 573px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.hero h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  margin-top: 72px;
+  flex: 1 1 100%;
+}
+
+.hero_go {
+  height: 26px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.personDate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin: 47px 93px 91px;
+}
+
+.personDateCompany {
+  height: 44px;
+  border-radius: 5px;
+  border-width: 1px;
+  flex: 1 1 100%;
+}
+
+.personDateFull {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.personDateName,
+.personDateLastName {
+  height: 44px;
+  flex: 1 1;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.personDateName {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.personDateLastName {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.personDateEmail {
+  height: 44px;
+  border-radius: 5px;
+  border-width: 1px;
+  flex: 1 1 100%;
+}
+
+.buttonReg {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#button {
+  flex: 1 1 100%;
+  height: 44px;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+}
+
+.buttonReg label {
+  position: absolute;
+  top: 11px;
+  right: 24px;
+}
+
+.checkboxLicense,
+.agreeLabel,
+.conditions {
+  flex: 1 0;
+}
+
+@media (max-width: 470px) {
+  label img {
+    display: none;
+  }
+
+  .personDateFull {
+    gap: 22px;
+  }
+
+  .imgLine {
+    display: none;
+  }
+
+  #button {
+    font-size: 1rem;
+  }
+
+  .personDate {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 572px) {
+  .licenseAgreement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .conditions {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .checkboxLicense,
+  .agreeLabel {
+    flex: none;
+  }
 }

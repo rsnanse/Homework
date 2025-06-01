@@ -8,58 +8,66 @@
   </head>
   <body>
     <main>
-      <div>
-        <h1>Регистрация</h1>
-        <div>Уже есть аккаунт?</div>
-        <div>
-          <form action="#">
-            <a href="#">Войти</a>
-          </form>
-        </div>
-        <div>
-          <form action="#">
-            <div>
-              <input
-                type="text"
-                name="company"
-                id="company"
-                placeholder="Ваша компания..."
-              />
+      <div class="conteiner">
+        <div class="form">
+          <div class="hero">
+            <h1>Регистрация</h1>
+            <div class="hero_go">
+              <span>Уже есть аккаунт?</span>
+              <form action="#">
+                <a href="#">Войти</a>
+              </form>
             </div>
-            <div>
+          </div>
+          <form class="personDate" action="#">
+            <input
+              class="personDateCompany"
+              type="text"
+              name="company"
+              placeholder="Ваша компания..."
+            />
+            <div class="personDateFull">
               <input
+                class="personDateName"
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Имя"
                 required
               />
-            </div>
-            <div>
+              <img class="imgLine" src="./Line 1.svg" alt="line" />
               <input
+                class="personDateLastName"
                 type="text"
                 name="lastname"
-                id="lastname"
                 placeholder="Фамилия"
                 required
               />
             </div>
-            <div>
+            <input
+              class="personDateEmail"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+            <div class="buttonReg">
+              <button id="button">Зарегистрироваться</button>
+              <label for="button"
+                ><img src="./Arrow 1.svg" alt="arrow"
+              /></label>
+            </div>
+            <div class="licenseAgreement">
               <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
+                class="checkboxLicense"
+                type="checkbox"
+                name="license"
                 required
               />
-            </div>
-            <div>
-              <button>Зарегистрироваться</button>
-            </div>
-            <div>
-              <input type="checkbox" name="license" id="license" required />
-              <label for="license">Я прочитал и принимаю </label>
-              <a href="#">Условия использования</a>
+              <label for="license" class="agreeLabel"
+                >Я прочитал и принимаю
+              </label>
+              <a href="#" class="conditions">Условия использования</a>
             </div>
           </form>
         </div>
