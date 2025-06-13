@@ -1,41 +1,45 @@
 * {
-  background-color: #374151;
+  box-sizing: border-box;
   font-weight: 400;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto", sans-serif;
 }
-/* Здесь я умышленно сделал background ко всему блогу серого цвета, чтобы цвет текста не сливался с фоном. Я понимаю, что это не верно поскольку используется градиент, но на данном этапе мы его пока не изучали. Исправлю впоследствии. */
 
 body {
-  margin: 0;
-}
-
-header {
-  margin-bottom: 180px;
+  background: linear-gradient(180deg, #374151 0%, #111827 100%);
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 button {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  background: 10%;
+  height: 14px;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 38px;
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
   border: 0;
+  text-align: center;
 }
 
-nav {
-  padding: 80px 226px 0px;
-  border: none;
-  margin: 0;
+header {
+  padding: 72px 180px 73px;
+}
+
+img {
+  border-radius: 5px;
 }
 
 nav a {
-  height: 21px;
   border: none;
 }
 
@@ -47,10 +51,16 @@ nav a,
 }
 
 nav ul {
-  padding: 0;
-  margin: 0;
   border: none;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+form {
+  position: relative;
+  margin-left: auto;
 }
 
 footer {
@@ -58,42 +68,32 @@ footer {
   padding: 100px 0 77px 0;
 }
 
-span a {
-  text-decoration: underline;
-  text-decoration-style: solid;
-}
-
 input::placeholder {
   color: #ffffff;
   opacity: 0.6;
 }
 
-#heroTextB {
-  margin: 0;
-  padding: 72px 180px; /*Здесь и на протяжении всей верстки ставлю внутренний отступ по ширине для наглядности, понимаю что в дальнейшем регулироваться будет flex или gridами*/
-  border: none;
-
-  height: 35px;
-  width: 35px;
+input:focus {
+  outline: none;
 }
-#heroTextB p {
-  margin: 0;
+
+span a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+#heroTextB {
+  font-family: "Source Code Pro", sans-serif;
+  padding: 6px 12px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 100%;
   background-color: #4b5563;
-  width: 11px;
-  height: 23px;
-  padding: 6px 12px;
   border: none;
   border-radius: 3px;
-}
-
-#search {
-  background: #1f293799;
-  border-radius: 100px;
-  border: none;
-  padding: 9px 49px 12px;
+  box-shadow: 0px 15px 30px 0px #00000026;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #heroDate,
@@ -106,6 +106,57 @@ time {
   padding: 0;
   border: 0;
   margin-bottom: 14px;
+  opacity: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#search {
+  background: #1f293799;
+  border-radius: 100px;
+  border: none;
+  padding: 9px 49px 12px;
+}
+
+.bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #ffffff99;
+}
+
+.colorSpectrum {
+  margin-bottom: 41px;
+}
+
+.developer {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.headerNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item1 {
+  margin-left: 11px;
+}
+
+.item2 {
+  margin-left: 77px;
+}
+
+.item3 {
+  margin-left: 52px;
+}
+
+.item4 {
+  margin-left: 39px;
 }
 
 .personName,
@@ -122,10 +173,6 @@ time {
   border: 0;
 }
 
-.developer {
-  font-size: 14px;
-}
-
 .sectionText1 {
   font-size: 20px;
   line-height: 32px;
@@ -133,7 +180,6 @@ time {
 
 .sectionText1,
 .sectionText2 {
-  margin: 0 0 15px 0;
   border: 0;
   padding: 0;
 }
@@ -145,16 +191,31 @@ span a,
   line-height: 30px;
 }
 
-.form {
-  margin: 0;
-  border: 0;
-  padding: 71px 0 0 1036px;
-}
-
 .personData {
-  margin-bottom: 28px;
+  margin-top: 2px;
+  display: flex;
+  gap: 16px;
 }
 
-.colorSpectrum {
-  margin-bottom: 69px;
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 0 365px;
+}
+
+.sectionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+.textFooter {
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
