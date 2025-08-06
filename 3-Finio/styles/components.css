@@ -1,0 +1,314 @@
+/* Стиль для всей секции тарифов */
+.section-tarifs {
+  padding: 0 118px;
+}
+
+/* Стиль для заголовка h2 и параграфа под ним */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.section-header__subtitle {
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 48px;
+  color: var(--color-text-black);
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.section-header__paragraph {
+  color: var(--color-text-paragraph);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+/* Стилизация карточек тарифов */
+
+.tarifs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 16px;
+  box-shadow: 0px 0px 32px 0px #4e5d7c29;
+  border-radius: var(--border-8);
+  background-color: var(--bg-color-primary);
+  align-items: center;
+  align-content: baseline;
+}
+
+.product-card__subtitle {
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--color-text-black);
+  font-weight: 800;
+  font-style: Extra Bold;
+  font-size: 32px;
+}
+
+.product-card__paragraph {
+  color: var(--color-text-paragraph);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.no-discount {
+  padding: 93px 40px 48px;
+}
+
+.product-card__info {
+  margin: 34px 0 24px;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--color-card-info);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.discount {
+  padding: 48px 40px;
+}
+
+.product-card__info_line {
+  grid-column: 1 / -1;
+  color: var(--color-line);
+}
+
+.product-card__button {
+  background-color: var(--bg-color-button);
+  border: none;
+  border-radius: 47px;
+  font-weight: 800;
+  font-style: Extra Bold;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-text-button);
+  padding: 12px 63.5px;
+  cursor: pointer;
+}
+
+.product-card__discount {
+  background-color: var(--bg-color-discount);
+  border-radius: var(--border-8);
+  padding: 4px 16px;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-text-discount);
+  width: fit-content;
+}
+
+.product-card__discount_25-50 {
+  font-weight: 800;
+  font-style: Extra Bold;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--color-text-discount);
+}
+
+.product-card__info_12month {
+  margin: 16px 0 18px;
+}
+
+.product-card__info_benefit {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: var(--color-text-discount);
+  border-radius: var(--border-8);
+  background-color: var(--bg-colot-benefit);
+  padding: 8px 16px;
+  width: fit-content;
+  margin: -16px; /* Здесь я смог отпозиционировать только отрицательным марджином, чтобы было похоже как на макете*/
+}
+
+.product-card:hover {
+  cursor: pointer;
+  --color-text-black: #ffffff;
+  --color-card-info: #ffffff;
+  --bg-color-button: #ffffff;
+  --color-text-button: #357efe;
+  --bg-color-primary: #357efe;
+  --color-text-paragraph: #ffffff99;
+}
+
+/* Адаптив карточек тарифов на различных экранах */
+/*(Комментарий по всей верстке: заголовок и адзац под ним сделал флексами потому что показалось так проще, почему так много экранов сделал: я сделал это для плавности при адаптиве который мы проверяем в инструментах разработчика в Google Chrome. Возможно так делать нельзя, просто при сжатии экрана я сделал так, чтобы карточки адекватно отображались на самом экране, чтобы плавно менялись паддинги и прочее, надеюсь понятно объяснил свою мысль. Кроме того, я в чате поддержки ментора спрашивал по поводу кастомных свойств. Выше видно почему я использовал для одного цвета разные названия. Возможно это также плохая практика но честно говоря иного способа для ховера почему то я не нашел. Если все перечисленное я сделал неверно, прошу обратной связи и помощи, как можно реализовать по другому. Также если при нажатии на карточку в любом ее месте нас полностью должно перекидывать на страницу покупки - переделаю, оформлю как ссылку. Пока оставил только как ховер с кнопкой. В общем, если говорить относительно верстки, у меня почему то всегда много вопросов по поведению того или много элемента. Поэтому приходится делать по своему успотрению. Не знаю как на реальных проектах обстоят дела с заказчиком, но мне кажется вопросами я бы его закидал. */
+
+@media (max-width: 1385px) {
+  .no-discount {
+    padding: 93px 24px;
+  }
+
+  .discount {
+    padding: 48px 24px;
+  }
+
+  .product-card__button {
+    padding: 12px 44px;
+  }
+}
+
+@media (max-width: 1276px) {
+  .tarifs {
+    grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1033px) {
+  .section-tarifs {
+    padding: 0 200px;
+  }
+  .tarifs {
+    gap: 24px;
+  }
+  .section-header {
+    margin-bottom: 20px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-tarifs {
+    padding: 0px 165px;
+  }
+  .section-header {
+    gap: 10px;
+  }
+  .section-header__subtitle {
+    text-align: left;
+    font-size: 36px;
+  }
+  .section-header__paragraph {
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-tarifs {
+    padding: 0px 120px;
+  }
+}
+
+@media (max-width: 610px) {
+  .section-tarifs {
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 475px) {
+  .tarifs {
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  }
+
+  .section-tarifs {
+    padding: 0 24px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-header__subtitle {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .section-header__paragraph {
+    text-align: left;
+  }
+
+  .product-card__info {
+    margin: 16px 0;
+  }
+
+  .no-discount {
+    padding: 48px 24px;
+  }
+
+  .discount {
+    padding: 48px 24px;
+  }
+
+  .product-card__button {
+    padding: 12px 44px;
+  }
+}
+
+@media (max-width: 375px) {
+  .tarifs {
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  }
+
+  .section-tarifs {
+    padding: 0 24px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-header__subtitle {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .section-header__paragraph {
+    text-align: left;
+  }
+
+  .product-card__info {
+    margin: 16px 0;
+  }
+
+  .no-discount {
+    padding: 48px 24px;
+  }
+
+  .discount {
+    padding: 48px 24px;
+  }
+
+  .product-card__button {
+    padding: 12px 44px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-header {
+    padding: 0 10px;
+  }
+  .section-tarifs {
+    padding: 0;
+  }
+}

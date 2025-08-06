@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="section-tarifs">
+        <div class="section-header">
+          <h2 class="section-header__subtitle">Тарифы</h2>
+          <p class="section-header__paragraph">
+            Все тарифы имеют полный функционал и отличаются только количеством
+            месяцев и выгодой
+          </p>
+        </div>
+        <div class="tarifs">
+          <div class="product-card no-discount">
+            <h2 class="product-card__subtitle">1 месяц</h2>
+            <p class="product-card__paragraph">
+              Тариф подойдёт тем, кто ведёт краткосрочные проекты
+            </p>
+            <div class="product-card__info">
+              <span>Общая стоимость</span>
+              <span>1 990 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Ваша выгода</span>
+              <span>0 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Стоимость месяца</span>
+              <span>1 990 ₽/мес</span>
+            </div>
+            <button class="product-card__button">Бесплатно 14 дней</button>
+          </div>
+          <div class="product-card discount">
+            <div class="product-card__discount">
+              Выгода <span class="product-card__discount_25-50">25%</span>
+            </div>
+            <h2 class="product-card__subtitle">6 месяцев</h2>
+            <p class="product-card__paragraph">
+              Тариф подойдёт для тех, кто уверенно ведёт финансовый учёт
+            </p>
+            <div class="product-card__info">
+              <span>Общая стоимость</span>
+              <span>8 940 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Ваша выгода</span>
+              <span class="product-card__info_benefit">3 000 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Стоимость месяца</span>
+              <span>1 490 ₽/мес</span>
+            </div>
+            <button class="product-card__button">Бесплатно 14 дней</button>
+          </div>
+          <div class="product-card discount">
+            <div class="product-card__discount">
+              Выгода <span class="product-card__discount_25-50">50%</span>
+            </div>
+            <h2 class="product-card__subtitle">12 месяцев</h2>
+            <p class="product-card__paragraph">
+              Тариф подойдёт для тех, кто уверенно ведёт финансовый учёт и хочет
+              сэкономить
+            </p>
+            <div class="product-card__info product-card__info_12month">
+              <span>Общая стоимость</span>
+              <span>11 880 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Ваша выгода</span>
+              <span class="product-card__info_benefit">12 000 ₽</span>
+              <hr class="product-card__info_line" />
+              <span>Стоимость месяца</span>
+              <span>990 ₽/мес</span>
+            </div>
+            <button class="product-card__button">Бесплатно 14 дней</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

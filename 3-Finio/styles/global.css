@@ -1,0 +1,37 @@
+:root {
+  --bg-color-primary: #ffffff;
+  --bg-color-button: #357efe;
+  --bg-color-discount: #1abc9c;
+  --bg-colot-benefit: #ffc736;
+  --color-text-black: #000000;
+  --color-text-paragraph: #4e5d7c80;
+  --color-card-info: #4e5d7c;
+  --color-line: #4e5d7c14;
+  --color-text-button: #ffffff;
+  --color-text-discount: #ffffff;
+  --border-8: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color-primary);
+}
+
+/* Сделал wrapper, в нем будет лежать вся страничка сайта в дальнейшем*/
+
+.wrapper {
+  max-width: 1392px;
+  margin: 0 auto;
+}
