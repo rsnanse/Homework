@@ -13,6 +13,11 @@ positionLongY - текущее положение пользователя long
 
 let positionLatX, positionLongY, addressLatX, addressLongY;
 
+positionLatX = 10;
+positionLongY = 15;
+addressLatX = 23;
+addressLongY = 43;
+
 const distance = Math.sqrt(
   (positionLatX - addressLatX) ** 2 + (positionLongY - addressLongY) ** 2
 );
