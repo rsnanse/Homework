@@ -1,20 +1,20 @@
-const personLanguage = "language";
+let personLanguage;
 
-switch (true) {
-  case personLanguage === "RU":
+switch (personLanguage) {
+  case "ru":
     console.log("Привет!");
 
     break;
-  case personLanguage === "SP":
-    console.log("Hola!");
+  case "en":
+    console.log("Hello!");
 
     break;
-  case personLanguage === "DE":
+  case "de":
     console.log("Guten tag!");
 
     break;
   default:
-    console.log("Hello");
+    console.log("Ни один язык не выбран");
 
     break;
 }
