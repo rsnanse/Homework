@@ -3,8 +3,13 @@ const initialCard = "4561-2612-1234-5464";
 function lunaCheck(card) {
   card = card.split("-").join("");
   for (const element of card) {
-    if (card.startsWith(0) || isNaN(element)) {
-      return "Карта недействительна";
+    if (
+      card.startsWith("0") ||
+      isNaN(element) ||
+      card.length < 13 ||
+      card.length > 19
+    ) {
+      return false;
     }
   }
   let res = [];
