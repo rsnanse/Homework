@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 200px;
+}
+
+.item {
+  padding: 10px;
+}
+
+input {
+  text-align: center;
+  width: 100px;
+}
