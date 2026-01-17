@@ -6,13 +6,16 @@ request.send();
 
 request.addEventListener('load', function () {
   const data = JSON.parse(this.responseText).abilities[0].ability.url;
-  console.log(data);
 
   const request = new XMLHttpRequest();
   request.open('GET', data);
   request.send();
   request.addEventListener('load', function () {
-    const data2 = JSON.parse(this.responseText).effect_entries[1].effect;
-    console.log(data2);
+    const data2 = JSON.parse(this.responseText).effect_entries;
+    const result = data2.find((el) => el.language.name === 'en');
+    if (!result) {
+      return;
+    }
+    console.log(result.effect);
   });
 });
