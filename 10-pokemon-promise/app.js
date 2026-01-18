@@ -9,7 +9,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
   .then((data) => {
     const result = data.effect_entries.find((el) => el.language.name === 'en');
     if (!result) {
-      throw new Error(error);
+      throw new Error('Описание на английском языке не найдено');
     }
     console.log(result.effect);
   })
