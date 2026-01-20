@@ -5,18 +5,19 @@ async function getQuote(id) {
     const quoteResponse = await fetch('https://dummyjson.com/quotes/' + id);
 
     const data = await quoteResponse.json();
-    return data.author;
+    return data;
   } catch (e) {
     console.error(e);
   }
 }
 
-async function race() {
+async function race(array) {
   try {
-    const res = await Promise.race([getQuote(1), getQuote(4), getQuote(6)]);
+    const res = await Promise.race(array);
     console.log(res);
+    return res;
   } catch (error) {
     console.error(error);
   }
 }
-race();
+race([getQuote(1), getQuote(4), getQuote(6)]);
