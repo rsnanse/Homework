@@ -14,7 +14,8 @@
     "build": "rollup",
     "start": "live-server"
   },
-  "dependencies": {
-    "rollup": "4.56.0"
+  "devDependencies": {
+    "rollup": "4.56.0",
+    "live-server": "1.2.2"
   }
 }
