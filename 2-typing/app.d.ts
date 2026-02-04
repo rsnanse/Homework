@@ -6,6 +6,6 @@
  * @param {boolean} [asOrdinal] - Deprecated, use toWordsOrdinal() instead!
  * @returns {string}
  */
-declare function toWords(number: string, asOrdinal: boolean): string;
+declare function toWords(number: number | string, asOrdinal?: boolean): string;
 export { toWords };
 //# sourceMappingURL=app.d.ts.map

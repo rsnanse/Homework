@@ -56,7 +56,7 @@ const TENTHS_LESS_THAN_HUNDRED = [
  */
 function toWords(number, asOrdinal) {
     let words;
-    let num = parseInt(number, 10);
+    let num = typeof number === 'string' ? parseInt(number, 10) : number;
     if (!isFinite(num)) {
         throw new TypeError('Not a finite number: ' + number + ' (' + typeof number + ')');
     }
@@ -67,7 +67,7 @@ function toWords(number, asOrdinal) {
     return asOrdinal ? makeOrdinal(words) : words;
 }
 function generateWords(number, words) {
-    let remainder, word;
+    let remainder = 0, word = '';
     // We’re done
     if (number === 0) {
         return !words ? 'zero' : words.join(' ').replace(/,$/, '');
