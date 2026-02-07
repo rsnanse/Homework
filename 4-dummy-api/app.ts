@@ -15,7 +15,7 @@ interface User {
   lastName: string;
   age: number;
   gender: Gender;
-  roles: Roles;
+  role: Roles;
 }
 
 function setRole(role: Roles): string {
@@ -39,7 +39,7 @@ async function getUsers(url: string) {
         lastName: element.lastName,
         age: element.age,
         gender: element.gender === Gender.MALE ? Gender.MALE : Gender.FEMALE,
-        roles: setRole(element.roles),
+        role: setRole(element.role),
       });
     });
   } catch (error: unknown) {
