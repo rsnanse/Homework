@@ -59,7 +59,10 @@ class Map {
       (el: Bucket): boolean => el.bucketKey === tmp,
     );
     if (tmp2) {
-      tmp2.bucketValue.push([key, value]);
+      const element = tmp2.bucketValue.find((el) => el.includes(key));
+      if (element) {
+        element.push(value);
+      }
     } else {
       this.buckets.push({ bucketKey: tmp, bucketValue: [[key, value]] });
     }
@@ -71,10 +74,10 @@ class Map {
       (el: Bucket): boolean => el.bucketKey === tmp,
     );
     if (tmp2) {
-      tmp2.bucketValue = tmp2.bucketValue.filter((el) => el[0] !== tmp);
+      tmp2.bucketValue = tmp2.bucketValue.filter((el) => el[0] !== key);
     }
     if (tmp2?.bucketValue.length === 0) {
-      this.buckets = this.buckets.filter((el) => el.bucketKey !== tmp);
+      this.buckets = this.buckets.filter((el) => el.bucketKey !== key);
     } else {
       return;
     }
@@ -86,18 +89,13 @@ class Map {
       (el: Bucket): boolean => el.bucketKey === tmp,
     );
     if (tmp2) {
-      const res = [];
-      for (let i = 0; i < tmp2.bucketValue.length; i++) {
-        const element = tmp2.bucketValue[i];
-        if (element && element[0] === key) {
-          if (typeof element[1] === 'string') {
-            res.push(element[1]);
-          } else if (typeof element[1] === 'number') {
-            res.push(element[1]);
-          }
-        }
+      const res = tmp2.bucketValue
+        .find((el) => el[0] === key)
+        ?.filter((el) => el !== key);
+
+      if (res) {
+        return res.toString();
       }
-      return res.toString();
     } else {
       return;
     }
@@ -109,4 +107,3 @@ class Map {
 }
 
 const map = new Map();
-console.log(map);
