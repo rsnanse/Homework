@@ -62,6 +62,9 @@ class Map {
         let tmp = hashFn(key);
         const tmp2 = this.buckets.find((el) => el.bucketKey === tmp);
         if (tmp2) {
+            tmp2.bucketValue = tmp2.bucketValue.filter((el) => el[0] !== tmp);
+        }
+        if (tmp2?.bucketValue.length === 0) {
             this.buckets = this.buckets.filter((el) => el.bucketKey !== tmp);
         }
         else {
@@ -79,12 +82,15 @@ class Map {
                     if (typeof element[1] === 'string') {
                         res.push(element[1]);
                     }
+                    else if (typeof element[1] === 'number') {
+                        res.push(element[1]);
+                    }
                 }
             }
             return res.toString();
         }
         else {
-            return 'Элемент не найден';
+            return;
         }
     }
     clear() {
