@@ -64,12 +64,16 @@ class Map {
       this.buckets.push({ bucketKey: tmp, bucketValue: [[key, value]] });
     }
   }
+
   delete(key: number | string): void {
     let tmp = hashFn(key);
     const tmp2 = this.buckets.find(
       (el: Bucket): boolean => el.bucketKey === tmp,
     );
     if (tmp2) {
+      tmp2.bucketValue = tmp2.bucketValue.filter((el) => el[0] !== tmp);
+    }
+    if (tmp2?.bucketValue.length === 0) {
       this.buckets = this.buckets.filter((el) => el.bucketKey !== tmp);
     } else {
       return;
@@ -88,12 +92,14 @@ class Map {
         if (element && element[0] === key) {
           if (typeof element[1] === 'string') {
             res.push(element[1]);
+          } else if (typeof element[1] === 'number') {
+            res.push(element[1]);
           }
         }
       }
       return res.toString();
     } else {
-      return 'Элемент не найден';
+      return;
     }
   }
 
