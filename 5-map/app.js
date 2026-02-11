@@ -54,7 +54,10 @@ class Map {
         if (tmp2) {
             const element = tmp2.bucketValue.find((el) => el.includes(key));
             if (element) {
-                element.push(value);
+                element[1] = value;
+            }
+            else {
+                tmp2.bucketValue.push([key, value]);
             }
         }
         else {
@@ -68,7 +71,7 @@ class Map {
             tmp2.bucketValue = tmp2.bucketValue.filter((el) => el[0] !== key);
         }
         if (tmp2?.bucketValue.length === 0) {
-            this.buckets = this.buckets.filter((el) => el.bucketKey !== key);
+            this.buckets = this.buckets.filter((el) => el.bucketKey !== tmp);
         }
         else {
             return;
@@ -78,11 +81,11 @@ class Map {
         let tmp = hashFn(key);
         const tmp2 = this.buckets.find((el) => el.bucketKey === tmp);
         if (tmp2) {
-            const res = tmp2.bucketValue
-                .find((el) => el[0] === key)
-                ?.filter((el) => el !== key);
-            if (res) {
-                return res.toString();
+            const element = tmp2.bucketValue.find((el) => el[0] === key);
+            if (element) {
+                if (typeof element[1] === 'string') {
+                    return element[1];
+                }
             }
         }
         else {
