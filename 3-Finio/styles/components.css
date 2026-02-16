@@ -1,6 +1,126 @@
-/* Стиль для всей секции тарифов */
-.section-tarifs {
-  padding: 0 118px;
+/* Wrapper */
+.wrapper {
+  max-width: 1392px;
+  margin: 0 auto;
+}
+
+/* Кнопка-ссылка Личный кабинет, попробовать бесплатно */
+
+.link {
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 140%;
+  color: var(--bg-color-secondary);
+  background-color: var(--bg-color-primary);
+  border-radius: var(--border-34);
+  padding: 12px 32px;
+}
+
+/* Горизонтальная разделительная линия секций */
+
+.horizontal-rule {
+  border-color: var(--color-line);
+  border-bottom: none;
+}
+
+.horizontal-rule__footer {
+  color: var(--color-line-footer);
+  border-bottom: 1px solid;
+}
+/* Заголовок h1 */
+
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  color: var(--bg-color-primary);
+}
+
+/* Элемент блока Product-feature */
+
+.product-feature__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--color-text-black);
+}
+
+/* Info-container */
+
+.info-container {
+  display: flex;
+  gap: 63px;
+  margin: 63px 0 37px;
+  padding-left: 118px;
+}
+
+.info-container__headling {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  color: var(--color-text-black);
+}
+
+.info-container__paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--color-text-paragraph);
+}
+
+.container-revers {
+  flex-direction: row-reverse;
+  margin: 80px 0;
+  padding-left: 0;
+  padding-right: 118px;
+  gap: 65px;
+  position: relative;
+}
+
+.info-container__image-container {
+  position: relative;
+}
+
+.price-table {
+  position: absolute;
+  width: 88%;
+  top: 28%;
+  left: 39%;
+  z-index: 2;
+}
+
+.container-revers_overflow {
+  gap: 217px;
+  margin-bottom: 120px;
+}
+
+/* Заголовок h2 белого цвета */
+.section-headling__h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  color: var(--color-text-button);
+}
+
+/* Текст с прозрачностью 80%*/
+
+.section-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--link-color-80);
+}
+
+/* box-info__advantages */
+.box-info__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Стиль для заголовка h2 и параграфа под ним */
@@ -44,7 +164,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 16px;
-  box-shadow: 0px 0px 32px 0px #4e5d7c29;
+  box-shadow: 0px 0px 32px 0px var(--color-shadow);
   border-radius: var(--border-8);
   background-color: var(--bg-color-primary);
   align-items: center;
@@ -92,13 +212,12 @@
   padding: 48px 40px;
 }
 
-.product-card__info_line {
+.info_line {
   grid-column: 1 / -1;
-  color: var(--color-line);
 }
 
 .product-card__button {
-  background-color: var(--bg-color-button);
+  background-color: var(--bg-color-secondary);
   border: none;
   border-radius: 47px;
   font-weight: 800;
@@ -148,167 +267,31 @@
   background-color: var(--bg-colot-benefit);
   padding: 8px 16px;
   width: fit-content;
-  margin: -16px; /* Здесь я смог отпозиционировать только отрицательным марджином, чтобы было похоже как на макете*/
+  margin: -16px;
 }
 
 .product-card:hover {
   cursor: pointer;
   --color-text-black: #ffffff;
   --color-card-info: #ffffff;
-  --bg-color-button: #ffffff;
+  --bg-color-secondary: #ffffff;
   --color-text-button: #357efe;
   --bg-color-primary: #357efe;
   --color-text-paragraph: #ffffff99;
 }
 
-/* Адаптив карточек тарифов на различных экранах */
-/*(Комментарий по всей верстке: заголовок и адзац под ним сделал флексами потому что показалось так проще, почему так много экранов сделал: я сделал это для плавности при адаптиве который мы проверяем в инструментах разработчика в Google Chrome. Возможно так делать нельзя, просто при сжатии экрана я сделал так, чтобы карточки адекватно отображались на самом экране, чтобы плавно менялись паддинги и прочее, надеюсь понятно объяснил свою мысль. Кроме того, я в чате поддержки ментора спрашивал по поводу кастомных свойств. Выше видно почему я использовал для одного цвета разные названия. Возможно это также плохая практика но честно говоря иного способа для ховера почему то я не нашел. Если все перечисленное я сделал неверно, прошу обратной связи и помощи, как можно реализовать по другому. Также если при нажатии на карточку в любом ее месте нас полностью должно перекидывать на страницу покупки - переделаю, оформлю как ссылку. Пока оставил только как ховер с кнопкой. В общем, если говорить относительно верстки, у меня почему то всегда много вопросов по поведению того или много элемента. Поэтому приходится делать по своему успотрению. Не знаю как на реальных проектах обстоят дела с заказчиком, но мне кажется вопросами я бы его закидал. */
+/* section-footer__textstyle (стилизация текста футера) */
 
-@media (max-width: 1385px) {
-  .no-discount {
-    padding: 93px 24px;
-  }
-
-  .discount {
-    padding: 48px 24px;
-  }
-
-  .product-card__button {
-    padding: 12px 44px;
-  }
+.section-footer__textstyle70 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: var(--color-text-footer70);
 }
 
-@media (max-width: 1276px) {
-  .tarifs {
-    grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
-    gap: 60px;
-  }
-}
-
-@media (max-width: 1033px) {
-  .section-tarifs {
-    padding: 0 200px;
-  }
-  .tarifs {
-    gap: 24px;
-  }
-  .section-header {
-    margin-bottom: 20px;
-    gap: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-tarifs {
-    padding: 0px 165px;
-  }
-  .section-header {
-    gap: 10px;
-  }
-  .section-header__subtitle {
-    text-align: left;
-    font-size: 36px;
-  }
-  .section-header__paragraph {
-    text-align: left;
-  }
-}
-
-@media (max-width: 700px) {
-  .section-tarifs {
-    padding: 0px 120px;
-  }
-}
-
-@media (max-width: 610px) {
-  .section-tarifs {
-    padding: 0px 50px;
-  }
-}
-
-@media (max-width: 475px) {
-  .tarifs {
-    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
-  }
-
-  .section-tarifs {
-    padding: 0 24px;
-  }
-
-  .section-header {
-    margin-bottom: 32px;
-  }
-
-  .section-header__subtitle {
-    font-size: 36px;
-    text-align: left;
-  }
-
-  .section-header__paragraph {
-    text-align: left;
-  }
-
-  .product-card__info {
-    margin: 16px 0;
-  }
-
-  .no-discount {
-    padding: 48px 24px;
-  }
-
-  .discount {
-    padding: 48px 24px;
-  }
-
-  .product-card__button {
-    padding: 12px 44px;
-  }
-}
-
-@media (max-width: 375px) {
-  .tarifs {
-    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
-  }
-
-  .section-tarifs {
-    padding: 0 24px;
-  }
-
-  .section-header {
-    margin-bottom: 32px;
-  }
-
-  .section-header__subtitle {
-    font-size: 36px;
-    text-align: left;
-  }
-
-  .section-header__paragraph {
-    text-align: left;
-  }
-
-  .product-card__info {
-    margin: 16px 0;
-  }
-
-  .no-discount {
-    padding: 48px 24px;
-  }
-
-  .discount {
-    padding: 48px 24px;
-  }
-
-  .product-card__button {
-    padding: 12px 44px;
-  }
-}
-
-@media (max-width: 320px) {
-  .section-header {
-    padding: 0 10px;
-  }
-  .section-tarifs {
-    padding: 0;
-  }
+.section-footer__textstyle50 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: var(--color-text-footer50);
 }
