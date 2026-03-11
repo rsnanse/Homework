@@ -72,7 +72,7 @@ class SecurityProxy implements IReq {
   constructor(private security: IReq) {}
 
   async exec<T>(id: number): Promise<T> {
-    if (id < 10) {
+    if (id >= 10) {
       throw new Error(`Недопустимый id: ${id}`);
     }
     return this.security.exec(id);
